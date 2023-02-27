@@ -23,7 +23,7 @@
 #define NK_GLFW_GL3_IMPLEMENTATION
 #define NK_KEYSTATE_BASED_INPUT
 #include "nuklear.h"
-#include "nuklear_glfw_gl3.h"
+#include "glfw_opengl3.h"
 
 #define WINDOW_WIDTH 1200
 #define WINDOW_HEIGHT 800
@@ -42,8 +42,8 @@
 /*#define INCLUDE_STYLE */
 /*#define INCLUDE_CALCULATOR */
 /*#define INCLUDE_CANVAS */
-#define INCLUDE_OVERVIEW
-#define INCLUDE_NODE_EDITOR
+/*#define INCLUDE_OVERVIEW*/
+/*#define INCLUDE_NODE_EDITOR*/
 
 #ifdef INCLUDE_ALL
   #define INCLUDE_STYLE
@@ -66,7 +66,7 @@
   #include "../../demo/common/overview.c"
 #endif
 #ifdef INCLUDE_NODE_EDITOR
-  #include "../../demo/common/node_editor.c"
+  #include "../node_editor.c"
 #endif
 
 /* ===============================================================

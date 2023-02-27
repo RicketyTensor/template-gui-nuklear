@@ -26,4 +26,3 @@ set(SOURCES
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} PUBLIC glfw m GL GLU GLEW )
 target_include_directories(${PROJECT_NAME} PUBLIC ${NUKLEAR_DIR})
-target_include_directories(${PROJECT_NAME} PUBLIC ${NUKLEAR_DIR}/demo/${BACKEND}_${RENDERER})
