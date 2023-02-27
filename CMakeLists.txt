@@ -1,4 +1,5 @@
 project(nuklear_app)
+cmake_minimum_required(VERSION 3.22)
 
 # =============================================================================
 # Global settings
@@ -16,7 +17,7 @@ set(RENDERER opengl3)
 # Select source files
 # =============================================================================
 set(SOURCES
-    ${NUKLEAR_DIR}/demo/${BACKEND}_${RENDERER}/main.c
+    ${SRC_DIR}/frameworks/${BACKEND}_${RENDERER}.c
 )
 
 # =============================================================================
@@ -24,4 +25,5 @@ set(SOURCES
 # =============================================================================
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} PUBLIC glfw m GL GLU GLEW )
+target_include_directories(${PROJECT_NAME} PUBLIC ${NUKLEAR_DIR})
 target_include_directories(${PROJECT_NAME} PUBLIC ${NUKLEAR_DIR}/demo/${BACKEND}_${RENDERER})
